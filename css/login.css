@@ -1,0 +1,207 @@
+body{
+	/*background-color: #dddddd;*/
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: rgb(203,95,147); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgb(203,95,147) 0%, rgb(193,71,124) 12%, rgb(193,71,124) 17%, rgb(193,71,124) 17%, rgb(168,0,67) 24%, rgb(193,71,124) 32%, rgb(168,0,67) 34%, rgb(168,0,67) 40%, rgb(193,71,124) 45%, rgb(168,0,67) 48%, rgb(193,71,124) 60%, rgb(168,0,67) 69%, rgb(168,0,67) 69%, rgb(193,71,124) 76%, rgb(168,0,67) 86%, rgb(219,55,115) 98%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgb(203,95,147) 0%,rgb(193,71,124) 12%,rgb(193,71,124) 17%,rgb(193,71,124) 17%,rgb(168,0,67) 24%,rgb(193,71,124) 32%,rgb(168,0,67) 34%,rgb(168,0,67) 40%,rgb(193,71,124) 45%,rgb(168,0,67) 48%,rgb(193,71,124) 60%,rgb(168,0,67) 69%,rgb(168,0,67) 69%,rgb(193,71,124) 76%,rgb(168,0,67) 86%,rgb(219,55,115) 98%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgb(203,95,147) 0%,rgb(193,71,124) 12%,rgb(193,71,124) 17%,rgb(193,71,124) 17%,rgb(168,0,67) 24%,rgb(193,71,124) 32%,rgb(168,0,67) 34%,rgb(168,0,67) 40%,rgb(193,71,124) 45%,rgb(168,0,67) 48%,rgb(193,71,124) 60%,rgb(168,0,67) 69%,rgb(168,0,67) 69%,rgb(193,71,124) 76%,rgb(168,0,67) 86%,rgb(219,55,115) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb5f93', endColorstr='#db3773',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#bgimg{
+	grid-column: 1;
+	grid-row: 1;
+	width: 100vw;
+	height: 100vh
+}
+
+#container{
+	display: grid;
+	grid-template-columns: repeat(13, 7.7vw);
+	grid-template-rows: repeat(13,7.7vh);
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+#container .img1{
+	width: 85px;
+	height: 80px;
+	background: #000;
+	grid-row: 3/5;
+	grid-column: 7/8;
+	justify-self: center;
+	align-self: center;
+	border-radius: 50%;
+	opacity: 0.75;
+	z-index: 1;
+}
+
+#space{
+	display: none;
+}
+
+.item1{
+	grid-column: 5/ 10;
+	grid-row: 4/12;
+	background: #000;
+	color: #fff;
+	opacity: 0.75;
+	padding: 3vh;
+}
+
+.item1 h1{
+	margin: 2vh;
+	padding: 0 0 1%;
+	font-size: 150%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.item1 .pform{
+	margin: 1%;
+	padding: 1%;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.item1 input{
+	width: 100%;
+	margin-bottom:2vh;
+}
+
+.item1 input[type="text"], input[type="email"], #spanform{
+          border: none;
+          border-bottom: .25vh solid #fff;
+          background: transparent;
+          outline:none;
+          height:5vh;
+          color:#fff;
+          font-size:10px;
+}
+
+.item1 input[type="button"]{
+      border: none;
+      outline:none;
+      height:5vh;
+      background:#fb2525;
+      color: #fff;
+      font-size:13px;
+      border-radius:20px;
+}
+
+.item1 input[type="button"]:hover{    
+	cursor:pointer;
+	background:#ffc107;
+ 	color:#000;
+}
+
+@media only screen  and (orientation: landscape) and (max-width: 823px){
+	#container .img1{
+		width: 50px;
+		height: 50px;
+		grid-row: 2/4;
+	}
+
+	.item1{
+		grid-column: 5/ 10;
+		grid-row: 3/12;
+	}
+}
+
+@media only screen and (min-width: 750px) and (orientation: portrait){
+	#container .img1{
+		width: 150px;
+		height: 125px;
+	}
+
+	#space{
+		display: inline;
+		visibility: hidden;
+	}
+
+	.item1 h1{
+		font-size: 200%;
+	}
+
+	.item1 .pform{
+		font-size: 150%;
+	}
+
+	.item1 input[type="text"], input[type="email"], #spanform{
+	          font-size:15px;
+	}
+
+	.item1 input[type="button"]{
+	      font-size:18px;
+	}
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+	#container .img1{
+		width: 100px;
+		height: 100px;
+	}
+
+	#space{
+		display: inline;
+		visibility: hidden;
+	}
+
+	.item1 h1{
+		margin: 3vh;
+		padding: 0;
+		font-size: 200%;
+	}
+
+	.item1 .pform{
+		padding: 0%;
+		font-size:150%;
+	}
+
+	.item1 input[type="text"], input[type="email"], #spanform{
+	          font-size:15px;
+	}
+
+	.item1 input[type="button"]{
+	      font-size:18px;
+	}
+}
+
+@media only screen and (min-width:1200px ){
+	#container .img1{
+		width: 130px;
+		height: 130px;
+	}
+
+	#space{
+		display: inline;
+		visibility: hidden;
+	}
+
+	.item1 h1{
+		margin: 2vh;
+		padding: 0 0 1%;
+		font-size:250%;
+	}
+
+	.item1 .pform{
+		font-size: 200%;
+	}
+
+	.item1 input[type="text"], input[type="email"], #spanform{
+	          font-size:20px;
+	}
+
+	.item1 input[type="button"]{
+	      font-size:20px;
+	}
+
+	.item1 input[type="button"]:hover{    
+		cursor:pointer;
+		background:#ffc107;
+	 	color:#000;
+	}
