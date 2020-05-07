@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 header{
-    background: #98E4D9;
+    /*background: #98E4D9;*/
     height: 15vh;
+    background: rgb(254,187,187); /* Old browsers */
+    background: -webkit-linear-gradient(bottom left, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%);
+    background: -o-linear-gradient(bottom left, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%);
+    background: linear-gradient(to top right, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
     /*text-align: center;*/
 }
 
@@ -82,7 +88,7 @@ header{
 }
 
 .active{
-  background: #000;
+  background: #387F75;
   -webkit-border-radius: 10%;
           border-radius: 10%;
 }
@@ -113,10 +119,18 @@ i.fa-sign-in-alt{
   font-size:25px;
 }
 
+
+
 @media only screen and (min-width:1200px){
   header{
-    background: #98E4D9;
+    /*background: #ED8867;/*98E4D9*/
+    background: rgb(254,187,187); /* Old browsers */
+    background: -webkit-linear-gradient(bottom left, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%);
+    background: -o-linear-gradient(bottom left, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%);
+    background: linear-gradient(to top right, rgb(254,187,187) 0%, rgb(254,144,144) 45%, rgb(255,92,92) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     height: 15vh;
+    width: 100vw;
     text-align: center;
   }
 
@@ -125,6 +139,7 @@ i.fa-sign-in-alt{
     font-size:5vh;
     font-weight: bold;
     padding: 3vh;
+    margin-left: 10vw;
   }
 
   .toggle-nav {
@@ -182,4 +197,31 @@ i.fa-sign-in-alt{
     grid-template-rows:repeat(12,8.34vw);
     
   }
+
+  #sign{
+    display: inline-block;
+    margin: 3vw;
+  }
+
+  #sign a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF;
+  }
+
+  #sign a:hover{
+    color: #00719e;
+    
+  }
+
+  i.fa-sign-in-alt{
+    color: #fff;
+    font-size:25px;
+  }
+
+  i.fa-sign-in-alt:hover{
+    color: #00719e;
+  }
+
 }
