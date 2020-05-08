@@ -1,23 +1,23 @@
 *{
   margin:0;
   padding: 0;
-
 }
-/*html{
+
+html,body{
   height: 100%;
 }
 
-body{
-  height: 100%;
+#wrap{
+  min-height: 95vh;
 }
-*/
 
 #gridlay{
 	display: grid;
-  min-height: 100vh;
 	grid-template-columns:repeat(12,8.34vw);
-	grid-template-rows: 100px,auto;
+	grid-template-rows: minmax(8.34vh,auto);
 	grid-gap:0 0;
+  overflow: auto;
+  /*padding-bottom: 10vh;*/
 }
 
 header{
@@ -149,19 +149,23 @@ i.fa-sign-in-alt{
           border-radius: 10%;
 }
 
-#main{
+.main{
 	background: #000;
   grid-column:1/13;
   grid-row:3;
   display: grid;
   grid-template-columns:repeat(12,8.34vw);
-  grid-template-rows:repeat(8.34vh,auto);
+  grid-template-rows:minmax(8.34vh,auto);
   text-align: center;
-  /*margin-bottom:5vh;*/
-  
 }
 
-#main #bhead1{
+/*.main div{
+  border:1px solid;
+  border-color: #FFF;
+  margin: 3px;
+}*/
+
+.main #bhead1{
   margin:10px;
   padding: 5px;
   color: #ff6600;
@@ -169,14 +173,25 @@ i.fa-sign-in-alt{
   grid-row:1;
   grid-column:1/13;
 }
+i.dd{
+  display: block;
+  font-size: 1.5em;
+}
 
-/*#main div{
-    border-top: 1px solid;
-  border-right: 1px solid;
-  border-color: #FFF;
-}*/
+i.dd.open{
+  display: none;
+}
 
-#main img{
+i.du{
+  display: none;
+}
+
+i.du.open{
+  display: block;
+  font-size: 1.2em;
+}
+
+.main img{
   width: 30vw;
   height: 25vh;
   border:1vw solid;
@@ -186,15 +201,32 @@ i.fa-sign-in-alt{
   box-shadow: 10px 10px 10px #FFF;
 }
 
-#main p{
+.main p{
   color: #F60;
-  font-size: 2rem;
+  font-size: 1.8em;
 }
 
+.marvel{
+  background: #000;
+  grid-column:1/13;
+  grid-row:2;
+  display: grid;
+  grid-template-columns:repeat(12,8.34vw);
+  grid-template-rows:repeat(8.34vh,auto);
+  text-align: center;
+  display: none;
+}
+
+.marvel.open{
+  display: grid;
+}
+.marvel p{
+  font-size: 2rem;
+}
 #one{
   margin: 0;
   padding: 1vh;
-  grid-row:2;
+  grid-row:1;
   grid-column:1/7;
 
 }
@@ -202,172 +234,170 @@ i.fa-sign-in-alt{
 #two{
   margin: 0;
   padding: 1vh;
-  grid-row:2;
+  grid-row:1;
   grid-column:7/13;
 }
 
 #three{
   margin: 0;
   padding: 1vh;
-  grid-row:3;
+  grid-row:2;
   grid-column:1/7;
 }
 
 #four{
   margin: 0;
   padding: 1vh;
-  grid-row:3;
+  grid-row:2;
   grid-column:7/13;
 }
 
 #five{
   margin: 0;
   padding: 1vh;
-  grid-row:4;
+  grid-row:3;
   grid-column:1/7;
 }
 
 #six{
   margin: 0;
   padding: 1vh;
-  grid-row:4;
+  grid-row:3;
   grid-column:7/13;
 }
 
 #seven{
   margin: 0;
   padding: 1vh;
-  grid-row:5;
+  grid-row:4;
   grid-column:1/7;
 }
 
 #eight{
   margin: 0;
   padding: 1vh;
-  grid-row:5;
+  grid-row:4;
   grid-column:7/13;
 }
 
 #nine{
   margin: 0;
   padding: 1vh;
-  grid-row:6;
+  grid-row:5;
   grid-column:1/7;
 }
 
 #ten{
   margin: 0;
   padding: 1vh;
-  grid-row:6;
+  grid-row:5;
   grid-column:7/13;
 }
 
 #eleven{
   margin: 0;
   padding: 1vh;
-  grid-row:7;
+  grid-row:6;
   grid-column:1/7;
 }
 
 #twelve{
   margin: 0;
   padding: 1vh;
-  grid-row:7;
+  grid-row:6;
   grid-column:7/13;
 }
 
 #thirteen{
   margin: 0;
   padding: 1vh;
-  grid-row:8;
+  grid-row:7;
   grid-column:1/7;
 }
 
 #fourteen{
   margin: 0;
   padding: 1vh;
-  grid-row:8;
+  grid-row:7;
   grid-column:7/13;
 }
 
 #fifteen{
   margin: 0;
   padding: 1vh;
-  grid-row:9;
+  grid-row:8;
   grid-column:1/7;
 }
 #sixteen{
   margin: 0;
   padding: 1vh;
-  grid-row:9;
+  grid-row:8;
   grid-column:7/13;
 }
 
 #seventeen{
   margin: 0;
   padding: 1vh;
-  grid-row:10;
+  grid-row:9;
   grid-column:1/7;
 }
 
 #eighteen{
   margin: 0;
   padding: 1vh;
-  grid-row:10;
+  grid-row:9;
   grid-column:7/13;
 }
 
 #nineteen{
   margin: 0;
   padding: 1vh;
-  grid-row:11;
+  grid-row:10;
   grid-column:1/7;
 }
 
 #twenty{
   margin: 0;
   padding: 1vh;
-  grid-row:11;
+  grid-row:10;
   grid-column:7/13;
 }
 
 #two1{
   margin: 0;
   padding: 1vh;
-  grid-row:12;
+  grid-row:11;
   grid-column:1/7;
 }
 
 #two2{
   margin: 0;
   padding: 1vh;
-  grid-row:12;
+  grid-row:11;
   grid-column:7/13;
 }
 
 #two3{
   margin: 0;
   padding: 1vh;
-  grid-row:13;
+  grid-row:12;
   grid-column:1/7;
 }
 
 #two4{
   margin: 0;
   padding: 1vh;
-  grid-row:13;
+  grid-row:12;
   grid-column:7/13;
 }
 
 
 footer{
   position: relative;
-  bottom: 0;
+  /*bottom: 0;*/
   grid-column:1/13;
   grid-row:4;
-}
-
-#foot{
+  /*height: 10vh;*/
   background: rgb(206,220,231); /* Old browsers */
   background: -moz-linear-gradient(-45deg,  rgb(206,220,231) 0%, rgb(89,106,114) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg,  rgb(206,220,231) 0%,rgb(89,106,114) 100%); /* Chrome10-25,Safari5.1-6 */
