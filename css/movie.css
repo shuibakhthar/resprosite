@@ -222,12 +222,13 @@ i.fa-sign-in-alt{
 }
 
 .marvel.open{
-
   display: grid;
 }
+
 .marvel p{
   font-size: 2rem;
 }
+
 #one{
   margin: 0;
   padding: 1vh;
@@ -405,7 +406,10 @@ i.fa-sign-in-alt{
   grid-column:1/13;
 }
 
-
+.det1{
+  display: none;
+  color: #F60;
+}
 footer{
   position: relative;
   /*bottom: 0;*/
