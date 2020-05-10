@@ -2,6 +2,20 @@ const mnav = document.getElementsByClassName("mobile-nav");
 const togglenav = document.getElementsByClassName("toggle-nav");
 const marvel = document.getElementsByClassName("marvel");
 
+// window.onload = function(){
+// 	temp = document.querySelector("#bhead1");
+// 	par = temp.parentElement;
+// 	// console.log(par.children);
+// 	for (var i = 0; i < par.children.length; i++) {
+// 		par.children[i].style.display = "grid";
+// 		par.children[i].style.gridTemplateColumns = "repeat(12,8.34vw)";
+		
+// 		// par.children[i].style.display = "grid";
+
+// 		console.log(par.children[i].children);
+// 	}
+// }
+
 function myFunction(x) {
 	for (var i = 0; i < mnav.length; i++) {
 		mnav[i].classList.toggle("open");
@@ -11,7 +25,6 @@ function myFunction(x) {
 
 function showcontent(x){
 	par = x.parentElement;
-	console.log(par.children);
 	if(par.children[3].style.display == "none"){
 		par.children[3].style.display = "grid";
 		par.children[2].classList.toggle("open");
@@ -19,7 +32,7 @@ function showcontent(x){
 	else{
 		par.children[3].style.display = "none";
 		par.children[2].classList.toggle("open");
-		
+
 	}
 
 }
