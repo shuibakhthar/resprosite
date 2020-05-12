@@ -88,6 +88,8 @@ function Tempalte(x){
 	`
 }
 
+temp =0;
+
 function expand(x){
 	par = x.parentElement;
 	chi = par.children;
@@ -121,6 +123,8 @@ function expand(x){
 				x.previousElementSibling.style.gridColumn = "1/13";
 			}
 		}
+		temp =temp+1;
+		console.log(temp);
 	}
 	else{
 		x.children[1].style.display = "block";
@@ -130,13 +134,41 @@ function expand(x){
 			x.nextElementSibling.style.gridColumn = nxtcol.getAttribute("name");
 		}
 		if (precol !=null) {
-			x.previousElementSibling.style.gridColumn = precol.getAttribute("name");;
+			x.previousElementSibling.style.gridColumn = precol.getAttribute("name");
 		}
-		for (var i = 0; i < chi.length; i++) {
+		// for (var i = 0; i < chi.length; i++) {
+		// 	chi[i].children[1].style.display = "block";
+		// 	chi[i].children[2].style.display = "none";
+		// }
+		
+	}
+	if (temp ==2) {
+		for (var i = 0; i < par.children.length; i++) {
 			chi[i].children[1].style.display = "block";
+			// par.children[i].
 			chi[i].children[2].style.display = "none";
+			chi[i].style.gridColumn = chi[i].getAttribute("name");
 		}
-	}	
+		a.style.display = "block";
+		x.children[1].style.display = "none";
+		x.style.gridColumn = "1/13";	
+		if(col == "1/7"){
+			if (nxtcol != null){
+				x.nextElementSibling.style.gridColumn = "1/13";
+			}
+		}
+		else if(col == "4/10"){
+			x.previousElementSibling.style.gridColumn = precol.getAttribute("name");;
+
+		}
+		else{
+			if (precol != null) {
+				x.previousElementSibling.style.gridColumn = "1/13";
+			}
+		}
+		temp = temp - 1;
+	}
+
 	
 }	
 
